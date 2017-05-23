@@ -1,0 +1,17 @@
+{
+    "name": "sbt",
+    "version": "0.0.1",
+    "description": "School bus tracking system",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tugrulcan/sbt"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "nodemon": "1.x",
+        "express": "4.15.x"
+    }
+}

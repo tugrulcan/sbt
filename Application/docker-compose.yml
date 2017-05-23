@@ -1,0 +1,42 @@
+version: "3.0"
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    container_name: "node_server"
+    volumes: 
+      - ./npm_logs:/root/.npm/_logs/
+    links:
+      - mongo
+  
+  mongo:
+    image: mongo
+    container_name: "db_server"
+    environment: 
+      - MONGODB_USERNAME=sbt
+      - MONGODB_PASSWORD=sbt
+      - MONGODB_DBNAME=sbt
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - ./mongo_data:/data/db
+
+  mongo_viewer:
+    image: mongo-express
+    container_name: "db_viewer"
+    environment: 
+      - ME_CONFIG_BASICAUTH_USERNAME = sbt
+      - ME_CONFIG_BASICAUTH_PASSWORD = sbt
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN = true
+      - ME_CONFIG_MONGODB_ADMINUSERNAME = sbt
+      - ME_CONFIG_MONGODB_ADMINPASSWORD = sbt
+    links:
+      - mongo
+    ports:
+      - "8081:8081"
+    depends_on: 
+      - mongo
