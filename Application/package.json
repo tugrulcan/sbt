@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "School bus tracking system",
     "scripts": {
-        "start": "nodemon app.js"
+        "start": "nodemon --inspect=0.0.0.0:5959 app.js"
     },
     "repository": {
         "type": "git",
