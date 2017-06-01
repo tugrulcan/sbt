@@ -38,11 +38,11 @@ export default class DriversApp extends Component {
       longitude: null,
       error: null,
     };
-
+    this.componentDidMount();
   }
 
   componentDidMount() {
-
+    alert("cdidmount!");
     this.watchId = navigator.geolocation.watchPosition(
       (position) => {
         alert("Did mount! coords: " + position.coords.latitude + " --- " + position.coords.longitude);
@@ -69,7 +69,7 @@ export default class DriversApp extends Component {
       addressDict.set(student.studentID, student.address);
     }
     let wpoints_array = Array.from(addressDict.values());
-    let wpoints_query = ""; 
+    let wpoints_query = "";
     for (wp of wpoints_array) {
       wpoints_query += wp + "|";
     }
@@ -84,11 +84,15 @@ export default class DriversApp extends Component {
     q_url += "&travelMode=DRIVING";
     q_url += "&key=AIzaSyCOqYI7eM7halH9qb10BmTGbrtrqfgBUw4";
 
-    console.log("QURL!!!!!!!!!QQ!Q!!!: " + encodeURI(q_url) );
+    console.log("QURL!!!!!!!!!QQ!Q!!!: " + q_url);
 
-    axios.get(encodeURI(q_url))
+
+    fetch(encodeURI(q_url))
+      .then(function (response) {
+        return response.json();
+      })
       .then((response) => {
-        console.log("responsejson: "  + JSON.stringify(response) );
+        console.log("responsejson: " + JSON.stringify(response));
 
         //alert("responseJson: " + JSON.stringify(responseJson));
         let url = 'http://maps.google.com/maps?saddr=' + origin_coords;
@@ -103,8 +107,16 @@ export default class DriversApp extends Component {
         }
 
         url += "+to:Muradiye Mah. Manolya Sokak No:234 Yunusemre - Manisa&dirflg=d";
-        console.log("URL!!!!!!!!!!!!!!!!!!!!!!!!! : " + encodeURI(url));
-        Linking.openURL( encodeURI(url));
+        console.log("URL! : " + url);
+        console.log("URL encoded! : " + encodeURI(url));
+        const surl = encodeURI(url);
+
+        Linking.openURL(surl);
+      })
+      .catch(function (error) {
+        console.log('There has been a problem with your fetch operation: ' + error.message);
+        // ADD THIS THROW error
+        throw error;
       });
   };
 
