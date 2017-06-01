@@ -1,0 +1,76 @@
+{
+  "studentList": [
+    {
+      "studentID": 1,
+      "name": "Can TORUN",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Kemal TORUN",
+      "parentPhone": "05301234567",
+      "willUse": true,
+      "address": "1901. Sk. No:43, Saruhan Mahallesi, 45010 Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 2,
+      "name": "Aleyna KOYLUCA",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Sevil KOYLUCA",
+      "parentPhone": "05301234589",
+      "willUse": true,
+      "address": "Oktay Erol Pulcuoğlu Cd. No:8, 45030 Keçiliköy Osb/Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 3,
+      "name": "Emir KARSLI",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Sedat KARSLI",
+      "parentPhone": "05301234590",
+      "willUse": true,
+      "address": "Manisa TOKİ Konutları No:3, Uncubozköy Mahallesi, 45030 Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 4,
+      "name": "Emre ÇEVİK",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Ali ÇEVİK",
+      "parentPhone": "05301238067",
+      "willUse": true,
+      "address": "5619. Sk. No:2, Keçili Köy Mahallesi, 45030 Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 5,
+      "name": "Ahmet PAMAY",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Melike PAMAY",
+      "parentPhone": "05301241567",
+      "willUse": true,
+      "address": "Vali Azizbey Cd. No:34, 75. Yıl Mahallesi, 45030 Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 6,
+      "name": "Hüseyin AYLIDERE",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Canan Türkel",
+      "parentPhone": "05341234567",
+      "willUse": true,
+      "address": "43. Sk. No:23, Turgut Özal Mahallesi, 45040 Manisa Merkez/Manisa, Türkiye"
+    },
+    {
+      "studentID": 7,
+      "name": "Azra Gürlek",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Ahmet Gürlek",
+      "parentPhone": "05421234567",
+      "willUse": true,
+      "address": "308. Sk. No:130, Kazım Karabekir Mahallesi, 45040 Şehzadeler/Manisa, Türkiye"
+    },
+    {
+      "studentID": 8,
+      "name": "Nisanur Sarıyer",
+      "photoURL": "https://facebook.github.io/react-native/img/header_logo.png",
+      "parentName": "Fatma Sarıyer",
+      "parentPhone": "05351234567",
+      "willUse": true,
+      "address": "1803. Sk. No:7, Çarşı Mahallesi, 45010 Manisa Merkez/Manisa, Türkiye"
+    }
+  ]
+}
